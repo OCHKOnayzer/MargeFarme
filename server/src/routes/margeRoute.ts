@@ -1,5 +1,8 @@
 import { Router } from "express";
+import MargeController from "../controller/MargeController";
 
 const router = Router();
 
-router.post('/hello world')
+const controller = MargeController.getItems
+
+router.post('/hello world',controller)
