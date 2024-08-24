@@ -1,8 +1,11 @@
 import { Router } from "express";
 import MargeController from "../controller/MargeController";
 
-const router = Router();
+const margeRouter = Router();
 
 const controller = MargeController.getItems
 
-router.post('/hello world',controller)
+margeRouter.post('/hello world',controller);
+
+
+export default margeRouter
