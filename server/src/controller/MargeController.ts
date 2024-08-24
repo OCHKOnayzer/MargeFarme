@@ -3,7 +3,7 @@ import MargeService from "../service/MargeService";
 
 class MargeController{ 
 
-    async getItems(req:Request,res:Response,next:NextFunction){ 
+  static async getItems(req:Request,res:Response,next:NextFunction){ 
 
       try{ 
 
@@ -15,6 +15,8 @@ class MargeController{
 
         const result = await MargeService.mathMarge(margeItems)
 
+        res.json(result)
+      
       }catch(e:any){ 
         return next(e)
       }
