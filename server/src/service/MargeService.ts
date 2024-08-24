@@ -4,6 +4,7 @@ class MargeService{
 
    static async mathMarge(margeItems:any){ 
 
+       try{ 
         const Items = margeItems;
 
         let AllItems: any = {}
@@ -12,7 +13,18 @@ class MargeService{
             AllItems.animals = Items[0].animals
         }
 
+        if(Items[1].plants && Object.keys(Items[1].plants).length > 0){ 
+            AllItems.plants = Items[1].plants
+        }
+
+        if(AllItems.length > 0){ 
+            
+        }
+
         return Items
+       }catch(e:any){ 
+        return e
+       }
 
     }
 
