@@ -7,12 +7,19 @@ const PORT = process.env.PORT || altPORT;
 
 const app:Application = express();
 
+<<<<<<< HEAD
 app.use(express.json())
 
 const apiRote = Router()
 
 app.use('/api',apiRote);
 apiRote.use('/margeRouter',margeRouter);
+=======
+const apiRote = Router()
+
+app.use('/api',apiRote);
+apiRote.use('/marge',margeRouter);
+>>>>>>> f42d3b0cdd211754c9748e0dfdb6044634462b5a
 
 const startAPP = ()=>{ 
     try{ 

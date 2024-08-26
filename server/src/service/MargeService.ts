@@ -1,8 +1,16 @@
 import MargeType from "../type";
 
+<<<<<<< HEAD
 class MargeService {
     static async mathMarge(margeItems: MargeType): Promise<MargeType | Error> {
       try {
+=======
+class MargeService{ 
+
+   static async mathMarge(margeItems:any){ 
+
+       try{ 
+>>>>>>> f42d3b0cdd211754c9748e0dfdb6044634462b5a
         const Items = margeItems;
   
         let AllItems: MargeType = {};
@@ -48,7 +56,22 @@ class MargeService {
   
       console.log(items)
 
+<<<<<<< HEAD
       return items;
+=======
+        if(Items[1].plants && Object.keys(Items[1].plants).length > 0){ 
+            AllItems.plants = Items[1].plants
+        }
+
+        if(AllItems.length > 0){ 
+            
+        }
+
+        return Items
+       }catch(e:any){ 
+        return e
+       }
+>>>>>>> f42d3b0cdd211754c9748e0dfdb6044634462b5a
 
     }
   }
